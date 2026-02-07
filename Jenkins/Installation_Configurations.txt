@@ -116,6 +116,8 @@ ls ~/.ssh
 #id_ecdsa - private key
 #id_ecdsa.pub - public
 
+cd ~/.ssh
+cat id_ecdsa.pub > authorized_keys
 
 #cat id_rsa.pub > authorized_keys
 
