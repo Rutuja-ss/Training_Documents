@@ -23,11 +23,11 @@ spec:
 
 # Create and display PODs
 
-kubectl create -f nginx-pod.yaml
-kubectl get pod
-kubectl get pod -o wide
-kubectl get pod nginx-pod -o yaml
-kubectl describe pod nginx-pod
+kubectl create -f nginx-pod.yaml     # To create object by giving the file name
+kubectl get pod                      # To get the status of the pod
+kubectl get pod -o wide              # To get the ip address and node of the pod
+kubectl get pod nginx-pod -o yaml    # To get the actual manifest file that maintained in ETCD
+kubectl describe pod nginx-pod       # To capture various events that happens on pod 
 
 
 *******************************************************************
@@ -35,7 +35,7 @@ kubectl describe pod nginx-pod
 3. Test & Delete
 
 # To get inside the pod
-kubectl exec -it nginx-pod bash
+kubectl exec -it nginx-pod bash      # To open the pod in interactive mode/ login to the pod
 
 exit 
 
